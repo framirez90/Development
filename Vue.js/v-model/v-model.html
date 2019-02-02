@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>v-model</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>{{nameModule}}</h1>
+
+
+            <input type="text" v-model="fruitName" @keyup.enter="addFruit" >
+            <button @click="addFruit">Add new Fruit</button>
+
+            <ul>
+                <li v-for="fruit of fruits"> 
+                    
+                    {{fruit.name}} - 
+                    <input type="number" v-model.number="fruit.stock">
+                    
+                    <button @click="fruit.stock++">+</button>
+                    <button @click="fruit.stock--">-</button>
+                    <span v-if="fruit.stock === 0">Empty Stock</span>
+                </li>
+            </ul>
+            <h4>Total: {{sumFruits}}</h4>
+        </div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+        <script src="v-model.js"></script>
+    </body>
+</htm>
