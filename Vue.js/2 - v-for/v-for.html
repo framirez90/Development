@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>array_v-for</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>{{array}}</h1>
+            <ul>
+                <li v-for="language of languages">{{language}}</li>
+            </ul>
+
+            <h1>{{json}}</h1>
+            <ul>
+                <li v-for="frut of fruits">{{frut.name}} - {{frut.stock}}</li>
+            </ul>
+        </div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+        <script src="v-for.js"></script>
+    </body>
+</htm>
