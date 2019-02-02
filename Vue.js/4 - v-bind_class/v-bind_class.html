@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <title>v-bind:class</title>
+    </head>
+    <body>
+        <div id="app" class="container-mt-5">
+            <div :class="['p-3', 'text-white', bg]">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate assumenda esse placeat id! Voluptatem quisquam sed obcaecati? Error eum est quisquam quod, a vero eveniet perferendis earum sequi fugit ipsum!</p>
+            </div>
+            <input type="text" class="form-control my-3" v-model="bg">
+            
+            <div class="text-white p-3" :class="{'bg-info' : color, 'bg-success' : !color}">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A exercitationem asperiores nostrum commodi incidunt nam, vel alias delectus sed, natus quaerat aspernatur dolore tempora ut sunt culpa sit totam sint.</p>
+            </div>
+            <button class="btn btn-primary" @click="color = !color">Change</button>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+        <script src="v-bind_class.js"></script>
+    </body>
+</htm>
