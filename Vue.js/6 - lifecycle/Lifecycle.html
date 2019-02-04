@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <title>Lifecycle</title>
+    </head>
+    <body>
+        <div id="app">
+           <h3>{{message}}</h3>
+           <button @click="message = 'Updated'">Update</button>
+           <button @click="destroy()">Destory</button>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+        <script src="Lifecycle.js"></script>
+    </body>
+</htm>
