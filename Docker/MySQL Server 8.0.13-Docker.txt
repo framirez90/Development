@@ -1,0 +1,26 @@
+MySQL Server 8.0.13 - Docker
+
+--run in docker
+
+docker pull mysql/mysql-server:8.0.13
+
+--first time
+docker run -p 3306:3306 -p 33060:33060 --name=mysql-server-8.0.13 -d mysql/mysql-server:8.0.13
+
+--re-run docker
+
+docker run -p 3306:3306 -p 33060:33060 -d mysql/mysql-server:8.0.13
+
+--run in MySQL
+
+docker logs mysql-server-8.0.13 2>&1 | grep GENERATED
+
+[Entrypoint] GENERATED ROOT PASSWORD: Qom(of=od]IbkufUMl@f.Ym0jN
+
+docker exec -it mysql-server-8.0.13 mysql -uroot -p
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
+
+update mysql.user set host = '%' where user='root';
+
+docker restart mysql-server-8.0.13
