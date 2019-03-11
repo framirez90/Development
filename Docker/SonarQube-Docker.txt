@@ -1,0 +1,43 @@
+SonarQube-Docker
+
+--install docker
+docker pull sonarqube:7.4-community
+
+docker run -d --name sonarqube-7.4-community -p 9000:9000 sonarqube:7.4-community
+
+--maven .m2
+
+<pluginGroups>
+	<pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+</pluginGroups>
+
+
+<profiles>
+	<profile>
+		<id>sonar</id>
+		<activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+		<properties>
+			<sonar.host.url>http://localhost:9000</sonar.host.url>
+		</properties>
+	</profile>
+</profiles>
+
+--maven goals
+clean deploy sonar:sonar
+
+--pom.xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.3</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
