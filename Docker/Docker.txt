@@ -2,3 +2,9 @@ Docker
 
 --CPU
 docker ps -q | xargs  docker stats --no-stream
+
+--enter to docker
+docker exec -it [container-id] bash
+
+--copy file to container
+docker cp [LOCAL-PATH/FILE.extension] [CONTAINER-ID]:[DOCKER-PATH/FILE.extension]
