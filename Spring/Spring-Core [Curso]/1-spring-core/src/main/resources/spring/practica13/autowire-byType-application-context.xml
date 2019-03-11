@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+
+	<!-- Define bean clase Car -->
+	<bean scope="prototype" autowire="byType"
+		class="org.certificatic.spring.core.practica13.autowire.bean.Car" />
+
+	<!-- Define bean engine -->
+	<bean scope="prototype"
+		class="org.certificatic.spring.core.practica13.autowire.bean.Engine"
+		p:model="V6 Twin Turbo" p:cylinderNumber="6" p:serialNumber="ABC-123" />
+
+	<!-- Define bean wheelGroup -->
+	<bean scope="prototype" autowire="byName"
+		class="org.certificatic.spring.core.practica13.autowire.bean.WheelGroup" />
+
+	<!-- Define lista wheelList -->
+	<util:list id="wheelList" list-class="java.util.ArrayList"
+		scope="prototype">
+		<ref bean="wheel" />
+		<ref bean="wheel" />
+		<ref bean="wheel" />
+		<ref bean="wheel" />
+	</util:list>
+
+	<!-- Define bean wheel -->
+	<bean id="wheel" scope="prototype"
+		class="org.certificatic.spring.core.practica13.autowire.bean.Wheel"
+		p:material="Run Flat" p:speedIndicator="250 75 Y" p:rinSize="19" />
+</beans>

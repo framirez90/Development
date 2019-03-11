@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-init-method="initMethod" default-destroy-method="destroyMethod">
+
+	<!-- Definir bean clase ConnectionDataBase -->
+	<bean
+		class="org.certificatic.spring.core.practica6.initdestroy.bean.ConnectionDataBase"
+		init-method="connect" destroy-method="disconnect" scope="singleton">
+		<property name="user" value="Pepe" />
+		<property name="password" value="pepitoRoot_123" />
+		<property name="database" value="produccionDB001" />
+	</bean>
+
+
+</beans>
