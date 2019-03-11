@@ -1,0 +1,18 @@
+Oracle-Docker
+
+--install docker
+docker pull sath89/oracle-12c
+
+docker run -d --name oracle-12c -p 1521:1521 -p 8000:8080 sath89/oracle-12c
+
+--parametros
+hostname: localhost
+port: 1521
+sid: xe
+service name: xe
+username: system
+password: oracle
+
+--Listener error
+docker exec -it oracle-12c bash
+lsnrctl status
