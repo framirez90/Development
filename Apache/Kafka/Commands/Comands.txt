@@ -1,0 +1,15 @@
+run zookeeper
+C:\Software\Apache\kafka_2.12-2.1.1\bin\windows >  
+    zookeeper-server-start.bat C:\Software\Apache\kafka_2.12-2.1.1\config\zookeeper.properties
+
+run kafka server
+C:\Software\Apache\kafka_2.12-2.1.1\bin\windows > 
+    kafka-server-start.bat C:\Software\Apache\kafka_2.12-2.1.1\config\server.properties
+
+--create kafka topic
+    C:\Software\Apache\kafka_2.12-2.1.1\bin\windows >
+    kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic ticket_topic
+
+--create a consumer
+    C:\Software\Apache\kafka_2.12-2.1.1\bin\windows >
+    kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic ticket_topic --from-beginning

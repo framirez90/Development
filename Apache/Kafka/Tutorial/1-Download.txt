@@ -1,0 +1,4 @@
+https://kafka.apache.org/downloads
+
+tar -xzf kafka_2.11-2.1.0.tgz
+cd kafka_2.11-2.1.0
