@@ -1,0 +1,18 @@
+Exam Tips - Java Basics
+
+  1.- The classes and interfaces can be defined in any order of occurrence in a 
+      Java source code file.
+  
+  2.- Classes and interfaces defined in the same Java source code file can’t be 
+      defined in separate packages. Classes and interfaces imported using 
+      the import statement are available to all the classes and interfaces 
+      defined in the same Java source code file.
+  
+  3.- Though both public static and static public are the valid order of 
+      keywords to declare the main method, public static is more common and 
+      thus more readable.
+
+  4.- The method parameters that are passed to the main method are also called 
+      command-line parameters or command-line values. As the name implies, 
+      these values are passed to a method from the command line.
+  
