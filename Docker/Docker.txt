@@ -8,3 +8,9 @@ docker exec -it [container-id] bash
 
 --copy file to container
 docker cp [LOCAL-PATH/FILE.extension] [CONTAINER-ID]:[DOCKER-PATH/FILE.extension]
+
+--logs 
+docker logs -f --tail=500 CONTAINER
+
+--enter to docker root
+docker exec --user="root" -it <container_name> /bin/bash
