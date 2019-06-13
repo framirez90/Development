@@ -1,0 +1,87 @@
+page 42 to 50
+
+My Answers:
+
+1 - A,B         [INCORRECT]
+2 - D           [OK]
+3 - B,D,E       [OK]
+4 - A,B         [OK]
+5 - C,D         [OK]
+6 - E           [OK]
+7 - A,B         [INCORRECT]
+8 - B           [OK]
+9 - A,B,C,D,E   [INCORRECT]
+10 - E          [OK]
+11 - C,D        [OK]
+12 - G          [OK]      
+13 - A,D        [OK]
+14 - D          [OK]
+15 - A,B,E      [INCORRECT]
+16 - B,C,E      [INCORRECT]
+17 - A,E        [OK]
+18 - C,D,E      [OK]
+19 - A,B,C,F    [OK]
+20 - B,E        [OK]
+21 - B          [INCORRECT]
+22 - B,C,E,F    [INCORRECT]
+23 - C,D        [OK]
+
+16/23 = 69.56% [PASSED]
+
+Answers page 334
+
+1. A, B, E. Option A is valid because you can use the dollar sign in identifiers. Option B is
+valid because you can use an underscore in identifiers. Option C is not a valid identifier
+because true is a Java reserved word. Option D is not valid because the dot (.) is not
+allowed in identifiers. Option E is valid because Java is case sensitive, so Public is not
+a reserved word and therefore a valid identifier. Option F is not valid because the first
+character is not a letter, $, or _.
+
+7. A, B, C. Option A is correct because it imports all the classes in the aquarium package
+including aquarium.Water. Options B and C are correct because they import Water by
+classname. Since importing by classname takes precedence over wildcards, these compile.
+Option D is incorrect because Java doesn’t know which of the two wildcard Water
+
+9. A, C, D, E. Option A is correct because it is the traditional main() method signature
+and variables may begin with underscores. Options C and D are correct because the
+array operator may appear after the variable name. Option E is correct because
+varargs are allowed in place of an array. Option B is incorrect because variables are
+not allowed to begin with a digit. Option F is incorrect because the argument must be
+an array or varargs. Option F is a perfectly good method. However, it is not one that
+can be run from the command line because it has the wrong parameter type.
+
+12. G. Option G is correct because local variables do not get assigned default values. The
+code fails to compile if a local variable is not explicitly initialized. If this question
+were about instance variables, options D and F would be correct. A boolean primitive
+defaults to false and a float primitive defaults to 0.0.
+
+15. A, E. Underscores are allowed as long as they are directly between two other digits.
+This means options A and E are correct. Options B and C are incorrect because the
+underscore is adjacent to the decimal point. Option D is incorrect because the underscore
+is the last character.
+
+16. B, C, D. 0b is the prefix for a binary value and is correct. 0x is the prefix for a hexadecimal
+value. This value can be assigned to many primitive types, including int and
+double, making options C and D correct. Option A is incorrect because 9L is a long
+value. long amount = 9L would be allowed. Option E is incorrect because the underscore
+is immediately before the decimal. Option F is incorrect because the underscore is
+the very last character.
+
+19. B, D. The Rabbit object from line 3 has two references to it: one and three. The references
+are nulled out on lines 6 and 8, respectively. Option B is correct because this
+makes the object eligible for garbage collection after line 8. Line 7 sets the reference
+four to the now null one, which means it has no effect on garbage collection. The Rabbit
+object from line 4 only has a single reference to it: two. Option D is correct because
+this single reference becomes null on line 9. The Rabbit object declared on line 10
+becomes eligible for garbage collection at the end of the method on line 12. Calling
+System.gc() has no effect on eligibility for garbage collection.
+
+21. A. While the code on line 3 does compile, it is not a constructor because it has a return
+type. It is a method that happens to have the same name as the class. When the code
+runs, the default constructor is called and count has the default value (0) for an int.
+
+22. B, E. C++ has operator overloading and pointers. Java made a point of not having
+either. Java does have references to objects, but these are pointing to an object that can
+move around in memory. Option B is correct because Java is platform independent.
+Option E is correct because Java is object oriented. While it does support some parts of
+functional programming, these occur within a class.

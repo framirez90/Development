@@ -1,0 +1,25 @@
+- When defining a class, To use most classes, you have to create objects. 
+  An object is a runtime instance of a class in memory
+
+-Java classes have two primary elements:
+  methods -> ften called functions or procedures in other languages
+  fields ->m ore generally known as variables
+
+Together these are called the members of the class.
+
+- 8 types of primitives
+
+boolean -> true or false -> default false
+
+byte    -> 8 bit  integral value        -> default = 0
+short   -> 18 bit integral value        -> default = 0
+int     -> 32 bit integral value        -> default = 0
+long    -> 64 bit integral value        -> default = 0
+
+float   -> 32 bit floating-point value  -> default = 0.0
+double  -> 64 bit floating-point value  -> default = 0.0
+
+char    -> 16 bit unicode               -> default = '\u0000' (NUL)
+---------------------------------
+
+72 pdf

@@ -1,0 +1,23 @@
+My Answers
+1-G X
+2-B X
+3-B X
+4-D -F X
+5-F -E X
+6-B OK
+7-A X
+8-A OK
+9-B,C,E X
+10-A,D,F X-OK
+11-B -netbeans OK
+12-C W in uppercase X
+13-C -netbeans OK
+14-F ???? X-OK
+15-C,D,E X-OK
+16-A,E,F,G X-OK
+17-B X
+18-B,D OK
+19-C  OK
+20-A,C,D,E  OK
+
+7/20

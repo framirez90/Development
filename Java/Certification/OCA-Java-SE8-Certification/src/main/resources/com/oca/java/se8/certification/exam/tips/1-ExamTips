@@ -15,4 +15,20 @@ Exam Tips - Java Basics
   4.- The method parameters that are passed to the main method are also called 
       command-line parameters or command-line values. As the name implies, 
       these values are passed to a method from the command line.
+
+  5.- You don’t need an explicit import statement to use members from the 
+      java.lang package. Classes and interfaces in this package are 
+      automatically imported in all other Java classes, interfaces, or enums.
   
+  6.- Members of a named package can’t access classes and interfaces defined in 
+      the default package.
+
+  7.- This feature is called static imports, but the syntax is import static.,p
+
+  8.- A concise but not too simple way of stating the previous rule is this:
+      A derived class can inherit and access protected members of its base class,
+      regardless of the package in which it’s defined. A derived class in a separate
+      package can’t access protected members of its base class using reference
+      variables.
+
+57
