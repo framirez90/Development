@@ -1,0 +1,10 @@
+--Pull docker
+docker pull jbfavre/vertica
+
+--run
+docker run -p 5433:5433 -d \
+  -v /home/framirez/volumes/vertica_data:/home/dbadmin/docker \
+  jbfavre/vertica:latest
+
+--Vertica Management Console
+  systemctl restart vertica-consoled
