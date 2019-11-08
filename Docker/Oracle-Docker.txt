@@ -16,3 +16,6 @@ password: oracle
 --Listener error
 docker exec -it oracle-12c bash
 lsnrctl status
+sqlplus / as sysdba
+
+sqlplus "sys as sysdba"
